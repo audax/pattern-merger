@@ -1,6 +1,5 @@
 import fitz  # PyMuPDF
 import argparse
-import sys
 
 def cm_to_points(cm):
     return cm * 72 / 2.54
