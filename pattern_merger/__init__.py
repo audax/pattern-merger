@@ -105,7 +105,7 @@ def check_paper_sizes(total_width, total_height, columns, rows, output_pdf):
 
     print(f"Composite PDF with trim and layout {columns}x{rows} saved as {output_pdf}")
     for paper, (width, height) in paper_sizes.items():
-        if total_width <= width and total_height <= height:
+        if total_width <= width and total_height <= height or total_height <= width and total_width <= height:
             return paper
     return "None"
 
